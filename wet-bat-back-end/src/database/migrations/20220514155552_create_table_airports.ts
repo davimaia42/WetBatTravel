@@ -5,7 +5,7 @@ export async function up(knex: Knex): Promise<void> {
     return knex.schema.createTable('airports', (table) => {
         table.uuid('id').primary().unique().notNullable();
         table.string('name');
-        table.uuid('address_id');
+        table.uuid('address_id').unique().notNullable();
 
         table.timestamps(true, true);
     });

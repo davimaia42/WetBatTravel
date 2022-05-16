@@ -3,7 +3,7 @@ import { Knex } from "knex";
 
 export async function up(knex: Knex): Promise<void> {
     return knex.schema.createTable('addresses', (table) => {
-        table.uuid('id').primary().unique().notNullable().references('airports.id');
+        table.uuid('id').primary().unique().notNullable().references('airports.address_id');
         table.string('street');
         table.string('number');
         table.string('district');
