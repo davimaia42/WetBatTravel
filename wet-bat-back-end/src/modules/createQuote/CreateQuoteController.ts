@@ -5,15 +5,27 @@ export class CreateQuoteController {
     constructor(private createQuoteService: CreateQuoteService) {}
 
     async handle (request: Request, response: Response) : Promise<Response> {
-        const { name, transportation, price, departure_airport_id, destination_airport_id} = request.body;
+        const {
+            name,
+            transportation,
+            price,
+            number_of_travelers,
+            departure_airport_id,
+            destination_airport_id,
+            destination_date,
+            departure_date
+        } = request.body;
 
         try {
             const quote = await this.createQuoteService.execute({
                 name,
                 transportation,
+                number_of_travelers,
                 price,
                 departure_airport_id,
-                destination_airport_id
+                destination_airport_id,
+                departure_date,
+                destination_date
             });
 
             return response.status(201).json(quote);

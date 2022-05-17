@@ -6,9 +6,12 @@ export class QuoteModel extends Model {
 
     public name:  string;
     public price: number;
+    public number_of_travelers: number;
     public transportation: string;
     public departure_airport_id: string;
     public destination_airport_id: string;
+    public departure_date: string;
+    public destination_date: string;
 
     static get tableName(){
         return 'quotes';

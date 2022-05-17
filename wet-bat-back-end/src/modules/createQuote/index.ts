@@ -2,7 +2,6 @@ import { PostgreQuotesRepository } from "../../repositories/implementations/Post
 import { CreateQuoteController } from "./CreateQuoteController";
 import { CreateQuoteService } from "./CreateQuoteService";
 
-
 const postgreQuotesRepository = new PostgreQuotesRepository();
 
 const createQuoteService = new CreateQuoteService(postgreQuotesRepository);

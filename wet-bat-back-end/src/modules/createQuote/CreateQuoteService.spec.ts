@@ -15,9 +15,12 @@ describe ('Create Quote', () => {
         const quoteData = {
             name: 'test name',
             transportation: 'test transportation',
+            number_of_travelers: 2,
             price: 1000,
             departure_airport_id: 'test airport departure',
-            destination_airport_id: 'test airport destination'
+            destination_airport_id: 'test airport destination',
+            departure_date: Date.now().toString(),
+            destination_date: Date.now().toString()
         }
 
         const quote = await createQuoteService.execute(quoteData);
@@ -32,9 +35,12 @@ describe ('Create Quote', () => {
         const quoteData = {
             name: 'test existing name',
             transportation: 'test existing transportation',
+            number_of_travelers: 2,
             price: 1000,
             departure_airport_id: 'test airport departure',
-            destination_airport_id: 'test airport destination'
+            destination_airport_id: 'test airport destination',
+            departure_date: Date.now().toString(),
+            destination_date: Date.now().toString()
         }
 
         await createQuoteService.execute(quoteData);
