@@ -6,5 +6,5 @@ export interface ICreateQuoteRequestDTO {
     departure_airport_id: string;
     destination_airport_id: string;
     departure_date: string;
-    destination_date: string;
+    return_date: string;
 }

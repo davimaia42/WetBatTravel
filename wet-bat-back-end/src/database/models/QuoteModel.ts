@@ -11,7 +11,7 @@ export class QuoteModel extends Model {
     public departure_airport_id: string;
     public destination_airport_id: string;
     public departure_date: string;
-    public destination_date: string;
+    public return_date: string;
 
     static get tableName(){
         return 'quotes';

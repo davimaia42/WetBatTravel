@@ -20,7 +20,7 @@ describe ('Create Quote', () => {
             departure_airport_id: 'test airport departure',
             destination_airport_id: 'test airport destination',
             departure_date: Date.now().toString(),
-            destination_date: Date.now().toString()
+            return_date: Date.now().toString()
         }
 
         const quote = await createQuoteService.execute(quoteData);
@@ -40,7 +40,7 @@ describe ('Create Quote', () => {
             departure_airport_id: 'test airport departure',
             destination_airport_id: 'test airport destination',
             departure_date: Date.now().toString(),
-            destination_date: Date.now().toString()
+            return_date: Date.now().toString()
         }
 
         await createQuoteService.execute(quoteData);

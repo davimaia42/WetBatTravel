@@ -12,7 +12,7 @@ export class CreateQuoteController {
             number_of_travelers,
             departure_airport_id,
             destination_airport_id,
-            destination_date,
+            return_date,
             departure_date
         } = request.body;
 
@@ -25,7 +25,7 @@ export class CreateQuoteController {
                 departure_airport_id,
                 destination_airport_id,
                 departure_date,
-                destination_date
+                return_date
             });
 
             return response.status(201).json(quote);
